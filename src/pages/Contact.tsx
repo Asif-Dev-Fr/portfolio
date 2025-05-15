@@ -1,6 +1,41 @@
 import React from "react";
+import {
+  faGithub,
+  faLinkedin,
+  IconDefinition,
+} from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+
+interface Links {
+  logo: IconDefinition;
+  title: string;
+  path: string;
+  description: string;
+}
 
 const Contact = () => {
+  const links: Links[] = [
+    {
+      logo: faLinkedin,
+      title: "LinkedIn",
+      path: "https://www.linkedin.com/in/asif-kassam-ali/",
+      description: "Kassam Ali Asif",
+    },
+    {
+      logo: faGithub,
+      title: "GitHub",
+      path: "https://github.com/Asif-Dev-Fr",
+      description: "Asif-Dev-Fr",
+    },
+    {
+      logo: faEnvelope,
+      title: "Email",
+      path: "mailto:asif.k.dev@gmail.com",
+      description: "asif.k.dev@gmail.comf",
+    },
+  ];
+
   return (
     <section
       id="contact"
@@ -19,57 +54,25 @@ const Contact = () => {
 
         <div className="max-w-2xl mx-auto">
           <div className="space-y-8">
-            {/* LinkedIn */}
-            <div className="flex flex-col md:flex-row items-center bg-slate-800 p-6  border-2 border-green-500 shadow-retro transform transition duration-300 hover:-translate-y-1 hover:shadow-retro-hover">
-              <div className="text-4xl text-green-400 mb-4 md:mb-0 md:mr-6">
-                <i className="fab fa-linkedin"></i>
-              </div>
-              <div className="text-center md:text-left">
-                <h3 className="text-xl text-green-300 mb-2">LinkedIn</h3>
-                <a
-                  href="https://www.linkedin.com/in/asif-kassam-ali/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-slate-300 hover:text-green-400 hover:underline transition duration-300"
-                >
-                  Kassam Ali Asif
+            {links.map((item: Links, i: number) => (
+              <div key={i}>
+                <a href={item.path} target="_blank" rel="noopener noreferrer">
+                  <div className="flex flex-col md:flex-row items-center bg-slate-800 p-6  border-2 border-green-500 shadow-retro transform transition duration-300 hover:-translate-y-1 hover:shadow-retro-hover">
+                    <div className="text-4xl text-green-400 mb-4 md:mb-0 md:mr-6">
+                      <FontAwesomeIcon icon={item.logo} className="mr-1" />
+                    </div>
+                    <div className="text-center md:text-left">
+                      <h3 className="text-xl text-green-300 mb-2">
+                        {item.title}
+                      </h3>
+                      <span className="text-slate-300 hover:text-green-400 hover:underline transition duration-300">
+                        {item.description}
+                      </span>
+                    </div>
+                  </div>
                 </a>
               </div>
-            </div>
-
-            {/* GitHub */}
-            <div className="flex flex-col md:flex-row items-center bg-slate-800 p-6  border-2 border-green-500 shadow-retro transform transition duration-300 hover:-translate-y-1 hover:shadow-retro-hover">
-              <div className="text-4xl text-green-400 mb-4 md:mb-0 md:mr-6">
-                <i className="fab fa-github-square"></i>
-              </div>
-              <div className="text-center md:text-left">
-                <h3 className="text-xl text-green-300 mb-2">GitHub</h3>
-                <a
-                  href="https://github.com/Asif-Dev-Fr"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-slate-300 hover:text-green-400 hover:underline transition duration-300"
-                >
-                  Asif-Dev-Fr
-                </a>
-              </div>
-            </div>
-
-            {/* Email */}
-            <div className="flex flex-col md:flex-row items-center bg-slate-800 p-6  border-2 border-green-500 shadow-retro transform transition duration-300 hover:-translate-y-1 hover:shadow-retro-hover">
-              <div className="text-4xl text-green-400 mb-4 md:mb-0 md:mr-6">
-                <i className="fas fa-envelope"></i>
-              </div>
-              <div className="text-center md:text-left">
-                <h3 className="text-xl text-green-300 mb-2">Email</h3>
-                <a
-                  href="mailto:asif.k.dev@gmail.com"
-                  className="text-slate-300 hover:text-green-400 hover:underline transition duration-300"
-                >
-                  asif.k.dev@gmail.com
-                </a>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
