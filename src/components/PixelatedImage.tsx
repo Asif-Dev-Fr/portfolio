@@ -4,12 +4,14 @@ interface PixelatedImageProps {
   src: string;
   alt: string;
   className?: string;
+  height: number;
 }
 
 const PixelatedImage: React.FC<PixelatedImageProps> = ({
   src,
   alt,
   className = "",
+  height,
 }) => {
   const [loaded, setLoaded] = useState(false);
 
@@ -22,6 +24,9 @@ const PixelatedImage: React.FC<PixelatedImageProps> = ({
         className={`w-full h-full object-cover ${
           loaded ? "image-pixelated" : "invisible"
         }`}
+        style={{
+          height,
+        }}
       />
       {!loaded && (
         <div className="absolute inset-0 bg-gray-800 flex items-center justify-center">
