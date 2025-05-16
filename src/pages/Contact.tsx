@@ -37,10 +37,7 @@ const Contact = () => {
   ];
 
   return (
-    <section
-      id="contact"
-      className="min-h-screen w-full py-16 bg-slate-900 text-slate-200"
-    >
+    <div className="min-h-screen w-full py-16 bg-slate-900 text-slate-200">
       <div className="container mx-auto px-4 md:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-green-400 mb-6 font-pixelated uppercase tracking-wider">
@@ -76,7 +73,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
