@@ -4,7 +4,6 @@ import PixelatedImage from "../components/PixelatedImage";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faChrome } from "@fortawesome/free-brands-svg-icons";
 import { faFilter } from "@fortawesome/free-solid-svg-icons";
-import useViewport from "../hooks/useUserView";
 
 // Project interface
 interface Project {
@@ -25,7 +24,6 @@ const Projects: React.FC = () => {
   const [showFilters, setShowFilters] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [showContent, setShowContent] = useState<boolean>(false);
-  const { isPcView } = useViewport();
 
   // This would typically come from an API, but we're hardcoding for this example
   const projectData: Project[] = [

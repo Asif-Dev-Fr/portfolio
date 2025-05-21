@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHome,
   faUser,
-  faLaptopCode,
+  // faLaptopCode,
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 
@@ -14,7 +14,7 @@ interface SidebarProps {
   soundEnabled: boolean;
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ darkMode, soundEnabled }) => {
+const Sidebar: React.FC<SidebarProps> = ({ /*darkMode,*/ soundEnabled }) => {
   const location = useLocation();
   const { playSound } = useSound();
 
