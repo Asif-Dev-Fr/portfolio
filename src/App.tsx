@@ -9,14 +9,14 @@ import Contact from "./pages/Contact";
 import ThemeToggle from "./components/ThemeToggle";
 import StartScreen from "./components/StartScreen";
 import SoundToggle from "./components/SoundToggle";
-import useSound from "./hooks/useSound";
+// import useSound from "./hooks/useSound";
 
 const App: React.FC = () => {
   const [darkMode, setDarkMode] = useState<boolean>(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
   const [showStartScreen, setShowStartScreen] = useState<boolean>(true);
   const [soundEnabled, setSoundEnabled] = useState<boolean>(true);
-  const { playSound } = useSound();
+  // const { playSound } = useSound();
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
