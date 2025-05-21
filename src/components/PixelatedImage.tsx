@@ -5,6 +5,7 @@ interface PixelatedImageProps {
   alt: string;
   className?: string;
   height: number;
+  ObjectFit?: "cover" | "contain" | "scale-down";
 }
 
 const PixelatedImage: React.FC<PixelatedImageProps> = ({
@@ -12,6 +13,7 @@ const PixelatedImage: React.FC<PixelatedImageProps> = ({
   alt,
   className = "",
   height,
+  ObjectFit,
 }) => {
   const [loaded, setLoaded] = useState(false);
 
@@ -26,6 +28,7 @@ const PixelatedImage: React.FC<PixelatedImageProps> = ({
         }`}
         style={{
           height,
+          objectFit: ObjectFit ?? "cover",
         }}
       />
       {!loaded && (

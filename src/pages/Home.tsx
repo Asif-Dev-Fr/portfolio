@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 import PixelatedImage from "../components/PixelatedImage";
 import TypewriterText from "../components/TypewriterText";
 import PROFILE from "../assets/images/profile.png";
+import useViewport from "../hooks/useUserView";
 
 const Home: React.FC = () => {
   const [showContent, setShowContent] = useState<boolean>(false);
+  const { isPcView } = useViewport();
 
   useEffect(() => {
     // Slight delay for dramatic effect when entering the page
@@ -15,6 +17,10 @@ const Home: React.FC = () => {
 
     return () => clearTimeout(timer);
   }, []);
+
+  const lvlCss: string = isPcView
+    ? "absolute -bottom-6 -right-0 p-2 bg-gray-900 dark:bg-gray-800 border-2 border-green-400 text-green-400 text-sm"
+    : "absolute -bottom-20 -right-0 p-2 bg-gray-900 dark:bg-gray-800 border-2 border-green-400 text-green-400 text-sm";
 
   return (
     <div className="min-h-full flex flex-col ">
@@ -71,9 +77,7 @@ const Home: React.FC = () => {
                 className="border-4 border-green-400"
                 height={320}
               />
-              <div className="absolute -bottom-6 -right-0 p-2 bg-gray-900 dark:bg-gray-800 border-2 border-green-400 text-green-400 text-sm">
-                LVL 63 DEVELOPER
-              </div>
+              <div className={lvlCss}>LVL 63 DEVELOPER</div>
             </div>
           </div>
         </div>

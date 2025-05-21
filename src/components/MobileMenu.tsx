@@ -35,8 +35,8 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ closeMenu, soundEnabled }) => {
 
   const navigationItems = [
     { path: "/", label: "HOME", icon: faHome },
-    { path: "/about", label: "ABOUT", icon: faUser },
-    { path: "/projects", label: "PROJECTS", icon: faLaptopCode },
+    { path: "/profile", label: "PROFILE", icon: faUser },
+    // { path: "/projects", label: "PROJECTS", icon: faLaptopCode },
     { path: "/contact", label: "CONTACT", icon: faEnvelope },
   ];
 

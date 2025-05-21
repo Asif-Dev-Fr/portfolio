@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import MobileMenu from "./components/MobileMenu";
 import Home from "./pages/Home";
@@ -61,14 +61,14 @@ const App: React.FC = () => {
         {/* Mobile Navigation Header */}
         <div className="md:hidden flex justify-between items-center p-4 bg-gray-800 dark:bg-gray-900 border-b-2 border-green-400">
           <h1 className="text-xl font-bold text-green-400 pixel-shadow">
-            ASIF.DEV
+            <Link to={"/"}>ASIF KASSAM ALI</Link>
           </h1>
           <div className="flex items-center">
-            <SoundToggle
+            {/* <SoundToggle
               enabled={soundEnabled}
               toggle={() => setSoundEnabled(!soundEnabled)}
             />
-            <ThemeToggle darkMode={darkMode} toggleTheme={toggleTheme} />
+            <ThemeToggle darkMode={darkMode} toggleTheme={toggleTheme} /> */}
             <button
               onClick={toggleMobileMenu}
               className="ml-4 p-2 border-2 border-green-400 text-green-400 hover:bg-green-400 hover:text-gray-900 transition-colors duration-300"

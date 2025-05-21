@@ -3,6 +3,7 @@ import RetroPanel from "../components/RetroPanel";
 import TypewriterText from "../components/TypewriterText";
 import PixelatedImage from "../components/PixelatedImage";
 import PROFILE from "../assets/images/profile.png";
+import useViewport from "../hooks/useUserView";
 
 interface Education {
   degree: string;
@@ -25,6 +26,7 @@ const About: React.FC = () => {
     "profile" | "experience" | "education"
   >("profile");
   const [showContent, setShowContent] = useState<boolean>(false);
+  const { isPcView } = useViewport();
 
   useEffect(() => {
     // Animation delay when entering page
@@ -166,6 +168,7 @@ const About: React.FC = () => {
                 alt="Asif Kassam"
                 className="border-4 border-green-400 mb-4"
                 height={320}
+                ObjectFit={isPcView ? "cover" : "contain"}
               />
 
               <RetroPanel title="STATS">
