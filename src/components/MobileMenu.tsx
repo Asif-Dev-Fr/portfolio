@@ -11,7 +11,7 @@ import {
 
 interface MobileMenuProps {
   closeMenu: () => void;
-  soundEnabled: boolean;
+  soundEnabled?: boolean;
 }
 
 const MobileMenu: React.FC<MobileMenuProps> = ({ closeMenu, soundEnabled }) => {

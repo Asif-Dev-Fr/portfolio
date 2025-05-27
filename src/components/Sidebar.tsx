@@ -10,8 +10,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 interface SidebarProps {
-  darkMode: boolean;
-  soundEnabled: boolean;
+  darkMode?: boolean;
+  soundEnabled?: boolean;
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ /*darkMode,*/ soundEnabled }) => {
