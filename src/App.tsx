@@ -64,11 +64,11 @@ const App: React.FC = () => {
             <Link to={"/"}>ASIF KASSAM ALI</Link>
           </h1>
           <div className="flex items-center">
-            {/* <SoundToggle
+            <SoundToggle
               enabled={soundEnabled}
               toggle={() => setSoundEnabled(!soundEnabled)}
             />
-            <ThemeToggle darkMode={darkMode} toggleTheme={toggleTheme} /> */}
+            <ThemeToggle darkMode={darkMode} toggleTheme={toggleTheme} />
             <button
               onClick={toggleMobileMenu}
               className="ml-4 p-2 border-2 border-green-400 text-green-400 hover:bg-green-400 hover:text-gray-900 transition-colors duration-300"
@@ -90,10 +90,12 @@ const App: React.FC = () => {
         <div className="hidden md:block w-64 border-r-2 border-green-400 dark:border-green-500 bg-gray-800 dark:bg-gray-900 p-4">
           <Sidebar darkMode={darkMode} soundEnabled={soundEnabled} />
           <div className="mt-auto flex justify-center space-x-4 pt-4">
-            <SoundToggle
-              enabled={soundEnabled}
-              toggle={() => setSoundEnabled(!soundEnabled)}
-            />
+            {/*
+              <SoundToggle
+                enabled={soundEnabled}
+                toggle={() => setSoundEnabled(!soundEnabled)}
+              />
+            */}
             <ThemeToggle darkMode={darkMode} toggleTheme={toggleTheme} />
           </div>
         </div>
