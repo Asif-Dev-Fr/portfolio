@@ -118,7 +118,7 @@ const About: React.FC = () => {
           showContent ? "opacity-100" : "opacity-0"
         }`}
       >
-        <h1 className="text-4xl font-bold mb-8 text-green-400 pixel-shadow">
+        <h1 className="text-4xl font-bold mb-8 dark:text-green-400 pixel-shadow">
           ABOUT ME
         </h1>
 

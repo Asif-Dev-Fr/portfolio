@@ -12,7 +12,7 @@ import StartScreen from "./components/StartScreen";
 // import useSound from "./hooks/useSound";
 
 const App: React.FC = () => {
-  // const [darkMode, setDarkMode] = useState<boolean>(true);
+  const [darkMode, setDarkMode] = useState<boolean>(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
   const [showStartScreen, setShowStartScreen] = useState<boolean>(true);
   // const [soundEnabled, setSoundEnabled] = useState<boolean>(true);
@@ -57,7 +57,7 @@ const App: React.FC = () => {
         //     ? "dark bg-gray-900 text-green-400"
         //     : "bg-gray-100 text-gray-800"
         // }`}
-        className={`flex flex-col md:flex-row h-screen w-screen overflow-hidden font-pixelated transition-colors duration-300 bg-gray-100 text-gray-800 `}
+        className={`flex flex-col md:flex-row h-screen w-screen overflow-hidden font-pixelated transition-colors duration-300 dark bg-gray-900 text-green-400 text-gray-800 `}
       >
         {/* Mobile Navigation Header */}
         <div className="md:hidden flex justify-between items-center p-4 bg-gray-800 dark:bg-gray-900 border-b-2 border-green-400">
@@ -102,7 +102,7 @@ const App: React.FC = () => {
         </div>
 
         {/* Main Content */}
-        <div className="flex-1 overflow-y-auto overflow-x-hidden bg-gray-100 dark:bg-gray-800 p-4">
+        <div className="flex-1 overflow-y-auto overflow-x-hidden bg-gray-800 dark:bg-gray-800 p-4">
           <div className="max-w-6xl mx-auto">
             <Routes>
               <Route path="/" element={<Home />} />

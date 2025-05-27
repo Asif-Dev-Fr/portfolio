@@ -35,7 +35,7 @@ const Home: React.FC = () => {
               <TypewriterText text="ASIF KASSAM ALI" delay={100} />
             </h1>
 
-            <div className="text-lg md:text-xl dark:text-green-300 mb-6">
+            <div className="text-lg md:text-xl text-green-200 dark:text-green-300 mb-6">
               <TypewriterText
                 text="FULL STACK DEVELOPER"
                 delay={80}
@@ -43,7 +43,7 @@ const Home: React.FC = () => {
               />
             </div>
 
-            <div className="text-sm md:text-base dark:text-green-200 mb-8 leading-relaxed">
+            <div className="text-sm md:text-base text-green-200 dark:text-green-200 mb-8 leading-relaxed">
               <TypewriterText
                 text="SPECIALIZING IN REACT, NODE.JS, TYPESCRIPT AND MODERN WEB TECHNOLOGIES."
                 delay={30}
