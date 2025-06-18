@@ -14,7 +14,7 @@ import StartScreen from "./components/StartScreen";
 const App: React.FC = () => {
   // const [darkMode, setDarkMode] = useState<boolean>(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
-  const [showStartScreen, setShowStartScreen] = useState<boolean>(true);
+  const [showStartScreen, setShowStartScreen] = useState<boolean>(false);
   // const [soundEnabled, setSoundEnabled] = useState<boolean>(true);
   // const { playSound } = useSound();
 
