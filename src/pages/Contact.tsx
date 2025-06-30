@@ -32,7 +32,7 @@ const Contact = () => {
       logo: faEnvelope,
       title: "Email",
       path: "mailto:asif.k.dev@gmail.com",
-      description: "asif.k.dev@gmail.comf",
+      description: "asif.k.dev@gmail.com",
     },
   ];
 
